@@ -15,19 +15,4 @@ public class SpringCloudFunctionExampleApplication {
         SpringApplication.run(SpringCloudFunctionExampleApplication.class, args);
     }
 
-    @Bean
-    public Function<String, String> function() {
-        return input -> input;
-    }
-
-    @Bean
-    public Consumer<String> consume() {
-        return input -> System.out.println("Input: " + input);
-    }
-
-    @Bean
-    public Supplier<String> supply() {
-        return () -> "Hello Youtube";
-    }
-
 }
